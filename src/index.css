@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+  font-family: 'Inter', sans-serif;
+  background-color: #242424;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Let clicks pass through to 3D canvas */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  z-index: 10;
+}
+
+.score-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  pointer-events: auto; /* Allow clicking the button */
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+}
+
+.game-over-text {
+  font-size: 4rem;
+  color: #ff4757;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
+}
+
+.restart-btn {
+  background: #2ed573;
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  background: #27ae60;
+  box-shadow: 0 5px 15px rgba(46, 213, 115, 0.4);
+}
